@@ -1,7 +1,7 @@
 import os
 import glob
 import unittest
-from test.skills.skill_tester import MockSkillsLoader, SkillTest
+from skill_tester import MockSkillsLoader, SkillTest
 
 __author__ = 'seanfitz'
 
