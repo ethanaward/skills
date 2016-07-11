@@ -1,7 +1,6 @@
 import json
 from pyee import EventEmitter
-from mycroft.messagebus.message import Message
-from mycroft.skills.core import load_skills
+from core import load_skills
 
 __author__ = 'seanfitz'
 
@@ -56,9 +55,6 @@ class SkillTest(object):
             self.compare_intents(example_json.get('intent'), intent.metadata)
             self.returned_intent = True
         self.emitter.once(example_json.get('intent_type'), compare)
-        self.emitter.emit(
-            'recognizer_loop:utterance',
-            Message('recognizer_loop:utterance', event))
         if not self.returned_intent:
             print("No intent handled")
             assert False
