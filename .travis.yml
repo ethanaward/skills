@@ -7,8 +7,10 @@ python: "2.7"
 cache: pocketsphinx-python
 install:
  - python ./test.py
+ - VIRTUALENV_ROOT=${VIRTUAL_ENV}
+ - pip install -r requirements.txt
  - cd mycroft-core
- - VIRTUALENV_ROOT=${VIRTUAL_ENV} ./dev_setup.sh
+ - ./dev_setup.sh
  - pip install -r requirements.txt
  - pip install -r test-requirements.txt
 # command to run tests
