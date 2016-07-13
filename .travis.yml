@@ -5,7 +5,7 @@ before_install:
  - git clone https://github.com/MycroftAI/mycroft-core.git
 python: "2.7"
 install:
- - python test.py
+ - python ./test.py
  - cd mycroft-core
  - pip install -r requirements.txt
  - pip install -r test-requirements.txt
