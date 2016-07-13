@@ -4,6 +4,7 @@ before_install:
  - sudo apt-get install -qq git mpg123 portaudio19-dev libglib2.0-dev swig bison libtool autoconf libglib2.0-dev
  - git clone https://github.com/MycroftAI/mycroft-core.git
 python: "2.7"
+cache: pocketsphinx-python
 install:
  - python ./test.py
  - cd mycroft-core
