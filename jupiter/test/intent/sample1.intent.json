@@ -1,5 +1,5 @@
 {
-  "utterance": "Thank you",
+  "utterance": "Thank ou",
   "intent_type": "ThankYouIntent",
   "intent": {
     "ThankYouKeyword": "thank you"
