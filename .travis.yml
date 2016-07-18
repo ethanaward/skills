@@ -4,17 +4,15 @@ before_install:
  - sudo apt-get install -qq git mpg123 portaudio19-dev libglib2.0-dev swig bison libtool autoconf libglib2.0-dev
  - git clone https://github.com/ethanaward/mycroft-core.git
 python: "2.7"
-cache: pocketsphinx-python
 install:
  - cd mycroft-core
  - git checkout independent-skills
  - VIRTUALENV_ROOT=${VIRTUAL_ENV} ./dev_setup.sh
  - cd ..
  - ./script.sh
- - pip install -r mycroft-core/test-requirements.txt
  - cd mycroft-core
+ - pip install -r test-requirements.txt
 # command to run tests
 script:
  - pep8 mycroft test
  - ./start.sh unittest --fail-on-error
- - cat build/report/tests/*
