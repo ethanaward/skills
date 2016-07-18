@@ -17,4 +17,4 @@ install:
 script:
  - pep8 mycroft test
  - ./start.sh unittest --fail-on-error
- - cat build/report/test/*
+ - cat build/report/tests/*
