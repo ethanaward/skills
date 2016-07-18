@@ -6,7 +6,7 @@ for f in *; do
         if [ "$f" != "mycroft-core" ]; then
             for file in $f/test/*.py; do
                 if [[ -e "$file" ]]; then
-                    mv $file "mycroft-core/test/skills/$f"
+                    cp -r $file "mycroft-core/test/skills/$f"
                 fi
             done
             cp -r $f mycroft-core/mycroft/skills/$f
