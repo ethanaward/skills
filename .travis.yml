@@ -2,6 +2,7 @@ language: python
 before_install:
  - sudo apt-get update -qq
  - sudo apt-get install -qq git mpg123 portaudio19-dev libglib2.0-dev swig bison libtool autoconf libglib2.0-dev
+ - mkdir -p ~/.mycroft/third_party_skills
  - git clone https://github.com/ethanaward/mycroft-core.git
 python: "2.7"
 install:
