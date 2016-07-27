@@ -34,7 +34,6 @@ class NPRNewsSkill(MycroftSkill):
     def __init__(self):
         super(NPRNewsSkill, self).__init__(name="NPRNewsSkill")
         self.url_rss = self.config['url_rss']
-        self.weather = weather.WeatherSkill()
         self.process = None
 
     def initialize(self):
@@ -42,9 +41,6 @@ class NPRNewsSkill(MycroftSkill):
         intent = IntentBuilder("NPRNewsIntent").require(
             "NPRNewsKeyword").build()
         self.register_intent(intent, self.handle_intent)
-
-        self.weather.bind(self.emitter)
-        self.weather.load_data_files(dirname(weather.__file__))
 
     def handle_intent(self, message):
         try:
