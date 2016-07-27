@@ -20,7 +20,6 @@ import feedparser
 import time
 from os.path import dirname
 
-import mycroft.skills.weather as weather
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill
 from mycroft.util import play_mp3

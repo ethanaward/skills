@@ -25,7 +25,7 @@ import time
 
 from mycroft.identity import IdentityManager
 from mycroft.skills.core import MycroftSkill
-from mycroft.skills.weather.owm_repackaged import OWM
+from owm_repackaged import OWM
 from mycroft.util.log import getLogger
 
 __author__ = 'jdorleans'
