@@ -10,7 +10,7 @@ for f in *; do
                     cp $file "mycroft-core/test/skills/$f"
                 fi
             done
-            cp -r $f mycroft-core/mycroft/skills/$f
+            cp -r $f ~/.mycroft/third_party_skills/$f
         fi
     fi
 done
